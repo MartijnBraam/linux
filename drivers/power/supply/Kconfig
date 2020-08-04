@@ -592,6 +592,14 @@ config BATTERY_PM8916_BMS_VM
           To compile this driver as module, choose M here: the
           module will be called pm8916-bmS-vm.
 
+config CHARGER_PM8916_LBC_CHGR
+        tristate "Qualcomm PM8916 LBC Charger support"
+        depends on MFD_PM8XXX || MFD_SPMI_PMIC
+        help
+          This driver adds support for pm8916 LBC
+
+          To compile this driver as module, choose M here: the
+          module will be called pm8916-lbc-chgr.
 
 config CHARGER_BQ2415X
 	tristate "TI BQ2415x battery charger driver"
