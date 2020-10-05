@@ -299,6 +299,21 @@
 	status = "okay";
 };
 
+&pm8916_0 {
+	charger: lbc-charger@1000 {
+		compatible = "qcom,pm8916-lbc-chgr";
+		reg = <0x1000>, <0x1200>, <0x1300>, <0x1600>;
+
+		qcom,lbc-chgr-vdd-safe = <4300000>;
+		qcom,lbc-chgr-ibat-safe = <810000>;
+		qcom,lbc-chgr-tchg-max = <0>;
+
+		interrupts = <0x0 0x13 1 IRQ_TYPE_EDGE_BOTH>;
+
+		monitored-battery = <&bat>;
+	};
+};
+
 &pm8916_pwm {
 	status = "okay";
 	pinctrl-names = "default";
