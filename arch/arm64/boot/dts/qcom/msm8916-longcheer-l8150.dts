@@ -312,6 +312,18 @@
 
 		monitored-battery = <&bat>;
 	};
+
+	bms-bat@4000 {
+		compatible = "qcom,pm8916-bms-vm";
+		reg = <0x4000>;
+
+		qcom,bms-vm-s1-sample-interval = <100>;
+		qcom,bms-vm-s2-sample-interval = <100>;
+
+		interrupts = <0x0 0x40 4 IRQ_TYPE_EDGE_BOTH>;
+
+		monitored-battery = <&bat>;
+	};
 };
 
 &pm8916_pwm {
