@@ -399,11 +399,11 @@
 
 &usb {
 	status = "okay";
-	extcon = <&usb_otg_hack>, <&usb_otg_hack>;
+	extcon = <&charger>, <&usb_otg_hack>;
 };
 
 &usb_hs_phy {
-	extcon = <&usb_otg_hack>;
+	extcon = <&charger>;
 };
 
 &wcd_codec {
